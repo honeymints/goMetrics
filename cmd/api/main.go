@@ -12,15 +12,6 @@ const (
 	port = ":8000"
 )
 
-type Data struct {
-	Name       string    `json:"name"`
-	CO2        float32   `json:"field1"`
-	PM         float32   `json:"field2"`
-	Temprature float32   `json:"field3"`
-	Humidity   float32   `json:"field5"`
-	Created_At time.Time `json:"field1_created_at"`
-}
-
 func main() {
 	inf := &Data{}
 	go func() {
