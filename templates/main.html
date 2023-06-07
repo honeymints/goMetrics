@@ -1,11 +1,29 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Get Dirtiest City</title>
+    <title>City and Metric Selection</title>
 </head>
 <body>
-    <form action="/" method="post">
-        <input type="submit" value="Get Dirtiest Location">
-    </form>
+<div>
+    <h2>Metrics</h2>
+    <label for="city">Choose a city:</label>
+    <select id="city" name="city">
+        <option value="astana">Astana</option>
+        <option value="semey">Semey</option>
+        <option value="kyzylorda">Kyzylorda</option>
+    </select>
+
+    <label for="metric">Choose a metric:</label>
+    <select id="metric" name="metric">
+        <option value="pollution">Pollution</option>
+        <option value="temperature">Temperature</option>
+    </select>
+</div>
+
+<div>
+    <h2>Bus Tracking for Astana</h2>
+    <label for="route_number">Choose a route number</label>
+    <input type="number" id="route_number" name="route_number" min="1" max="999">
+</div>
 </body>
 </html>
