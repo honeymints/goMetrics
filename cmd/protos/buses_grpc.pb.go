@@ -4,7 +4,7 @@
 // - protoc             v3.21.12
 // source: buses.proto
 
-package gen
+package buses
 
 import (
 	context "context"
