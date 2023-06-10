@@ -1,8 +1,8 @@
 syntax = "proto3";
 
-package protos;
+package buses;
 
-option go_package = "protos/";
+option go_package = "./pkg/buses/pb";
 
 service BusService{
   rpc RequestBus(BusRequest) returns (BusResponse) {}

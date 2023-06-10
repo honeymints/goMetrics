@@ -4,7 +4,7 @@
 // - protoc             v3.21.12
 // source: buses.proto
 
-package protos
+package pb
 
 import (
 	context "context"
@@ -19,7 +19,7 @@ import (
 const _ = grpc.SupportPackageIsVersion7
 
 const (
-	BusService_RequestBus_FullMethodName = "/protos.BusService/RequestBus"
+	BusService_RequestBus_FullMethodName = "/buses.BusService/RequestBus"
 )
 
 // BusServiceClient is the client API for BusService service.
@@ -96,7 +96,7 @@ func _BusService_RequestBus_Handler(srv interface{}, ctx context.Context, dec fu
 // It's only intended for direct use with grpc.RegisterService,
 // and not to be introspected or modified (even as a copy)
 var BusService_ServiceDesc = grpc.ServiceDesc{
-	ServiceName: "protos.BusService",
+	ServiceName: "buses.BusService",
 	HandlerType: (*BusServiceServer)(nil),
 	Methods: []grpc.MethodDesc{
 		{

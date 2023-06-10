@@ -4,7 +4,7 @@
 // - protoc             v3.21.12
 // source: metrics.proto
 
-package protos
+package pb
 
 import (
 	context "context"
@@ -19,8 +19,8 @@ import (
 const _ = grpc.SupportPackageIsVersion7
 
 const (
-	MetricsService_RequestTemp_FullMethodName = "/protos.MetricsService/RequestTemp"
-	MetricsService_RequestPol_FullMethodName  = "/protos.MetricsService/RequestPol"
+	MetricsService_RequestTemp_FullMethodName = "/metrics.MetricsService/RequestTemp"
+	MetricsService_RequestPol_FullMethodName  = "/metrics.MetricsService/RequestPol"
 )
 
 // MetricsServiceClient is the client API for MetricsService service.
@@ -129,7 +129,7 @@ func _MetricsService_RequestPol_Handler(srv interface{}, ctx context.Context, de
 // It's only intended for direct use with grpc.RegisterService,
 // and not to be introspected or modified (even as a copy)
 var MetricsService_ServiceDesc = grpc.ServiceDesc{
-	ServiceName: "protos.MetricsService",
+	ServiceName: "metrics.MetricsService",
 	HandlerType: (*MetricsServiceServer)(nil),
 	Methods: []grpc.MethodDesc{
 		{

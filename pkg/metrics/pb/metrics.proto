@@ -1,8 +1,8 @@
 syntax = "proto3";
 
-package protos;
+package metrics;
 
-option go_package = "protos/";
+option go_package = "./pkg/metrics/pb";
 
 service MetricsService{
   rpc RequestTemp(TemperatureRequest) returns (TemperatureResponse) {}
