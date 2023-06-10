@@ -2,11 +2,11 @@ syntax = "proto3";
 
 package protos;
 
-option go_package = "protos/metrics";
+option go_package = "protos/";
 
 service MetricsService{
-  rpc RequestTemp(TemperatureRequest) returns (stream TemperatureResponse) {}
-  rpc RequestPol(PollutionRequest) returns (stream PollutionResponse) {}
+  rpc RequestTemp(TemperatureRequest) returns (TemperatureResponse) {}
+  rpc RequestPol(PollutionRequest) returns (PollutionResponse) {}
 }
 
 message TemperatureResponse {

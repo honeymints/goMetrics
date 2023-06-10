@@ -2,10 +2,10 @@ syntax = "proto3";
 
 package protos;
 
-option go_package = "proto/buses";
+option go_package = "protos/";
 
 service BusService{
-  rpc RequestBus(BusRequest) returns (stream BusResponse) {}
+  rpc RequestBus(BusRequest) returns (BusResponse) {}
 
 }
 message BusRequest {
