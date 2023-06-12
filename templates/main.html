@@ -12,6 +12,7 @@
         <option value="semey">Semey</option>
         <option value="oskemen">Oskemen</option>
         <option value="atyrau">Atyrau</option>
+        <input type="submit" value="Submit">
     </select>
 
     <label for="metric">Choose a metric:</label>
@@ -28,3 +29,38 @@
 </div>
 </body>
 </html>
+
+<script>
+document.querySelector('#metrics-form').addEventListener('submit', function(e) {
+    e.preventDefault();
+
+    var city = document.querySelector('#city').value;
+    var metric = document.querySelector('#metric').value;
+
+    fetch('/metrics', {
+        method: 'POST',
+        body: new URLSearchParams('city=' + city + '&metric=' + metric),
+        headers: {
+            'Content-Type': 'application/x-www-form-urlencoded'
+        }
+    }).then(function(response) {
+        // Handle the response here
+    });
+});
+
+document.querySelector('#bus-form').addEventListener('submit', function(e) {
+    e.preventDefault();
+
+    var routeNumber = document.querySelector('#route_number').value;
+
+    fetch('/bus', {
+        method: 'POST',
+        body: new URLSearchParams('route_number=' + routeNumber),
+        headers: {
+            'Content-Type': 'application/x-www-form-urlencoded'
+        }
+    }).then(function(response) {
+        // Handle the response here
+    });
+});
+</script>
