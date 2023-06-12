@@ -2,7 +2,7 @@ syntax = "proto3";
 
 package metrics;
 
-option go_package = "./pkg/metrics/pb";
+option go_package = "./proto/metrics/pb";
 
 service MetricsService{
   rpc RequestTemp(TemperatureRequest) returns (TemperatureResponse) {}
